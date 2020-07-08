@@ -18,6 +18,8 @@ body {margin: 0px;}
 
 .hidden {visibility: hidden;}
 
+.valid-txt{border: 1px red solid;}
+
 .input-disabled {
     outline: none;
     background-color: transparent;
@@ -221,6 +223,15 @@ body {margin: 0px;}
 @keyframes beat {
     0% {
         opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
     }
     100% {
         opacity: 1;
