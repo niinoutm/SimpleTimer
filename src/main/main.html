@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="../common/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body>
+        <div class="content-area center">
+            <div class="info-area center">
+                <span>TASK:</span><br>
+                <input type="text" class="info-txt input-disabled center" id="infoText" value="開発作業"" readonly/>
+            </div>
+            <div class="disp-area">
+                <input type="text" class="circle circle-base input-disabled cursor-df center" id="circle" value="000s" readonly/>
+                <input type="text" class="circle circle-shadow input-disabled cursor-df" id="circleShadow"/>
+            </div>
+            <div class="operate-area center">
+                <input type="button" class="open-setting-btn input-disabled cursor-po center" id="openSettingBtn" value="・・・"/>
+            </div>
+            <!-- dialog -->
+            <div class="dialog-window">
+                <div class="title-area">
+                    <input type="text" class="title-txt input-disabled center" id="title-txt" value="Task Timer"" readonly/>
+                </div>
+                <div class="input-area">
+                    <div class="task-row">
+                        <input type="button" class="tgl-btn hidden"/>
+                        <span>TASK1:</span>
+                        <input type="text" class="task-txt" id="infoText" placeholder="input task"/>
+                    </div>
+                    <div class="task-row">
+                        <input type="button" class="tgl-btn hidden"/>
+                        <span>TASK2:</span>
+                        <input type="text" class="task-txt" id="infoText" placeholder="input task"/>
+                    </div>
+                    <div class="task-row">
+                        <input type="button" class="tgl-btn input-disabled cursor-po center plus" id="tgl-btn" value="+"/>
+                        <span class="txt-deact">TASK3:</span>
+                        <input type="text" class="task-txt task-txt-deact" id="infoText" placeholder="input task" readonly/>
+                    </div>
+                    <div class="interval-row">
+                        <span>INTERVAL</span><br>
+                        <input type="text" class="task-txt" id="infoText" value=""/>
+                        <br>seconds
+                    </div>
+                </div>
+                <div class="btn-area right">
+                    <input type="button" class="btn set-btn btn-act cursor-po center" id="setBtn" value="set"/>
+                    <input type="button" class="btn close-btn btn-deact cursor-po center" id="closeBtn" value="close"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

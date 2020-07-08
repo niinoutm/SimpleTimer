@@ -1,0 +1,221 @@
+
+/*------------------------------
+ common
+------------------------------*/
+*{font-family: 'M PLUS 1p', sans-serif;}
+
+body {margin: 0px;}
+
+.center {text-align: center;}
+
+.right {text-align: right;}
+
+.cursor-df {cursor: default;}
+
+.cursor-po {cursor: pointer;}
+
+.none {display:none;}
+
+.hidden {visibility: hidden;}
+
+.input-disabled {
+    outline: none;
+    background-color: transparent;
+}
+
+/*------------------------------
+ main
+------------------------------*/
+.content-area {height: 400px;}
+
+/*
+ info
+------------------------------*/
+.info-area {
+    height: 70px;
+    padding-top: 20px;
+    color: gray;
+}
+
+.info-txt {
+    width: 300px;
+    height: 45px;
+    border: 0px;
+    color: gray;
+    font-size: 30px;
+}
+
+/*
+ disp
+------------------------------*/
+.disp-area {
+    height: 280px;
+    background-color: white;
+}
+
+.circle {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+}
+
+.circle-base {
+    border: 0px;
+    color: #ff13b6;
+    font-size: 65px;
+    z-index: 9;
+}
+
+.circle-shadow {
+    border: 5px #ff13b6 solid;
+    border-radius: 130px;
+    z-index: 8;
+}
+
+/*
+ operate
+------------------------------*/
+.operate-area {height: 30px;}
+
+.open-setting-btn {
+    width: 80px;
+    height: 30px;
+    border: 0px;
+    color: gray;
+    font-size: 20px;
+}
+
+.open-setting-btn:hover {transform: scale(1.1);}
+
+/*------------------------------
+ dialog
+------------------------------*/
+.dialog-window {
+    width: 400px;
+    height: 380px;
+    position: relative;
+    top: -380px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 4px #3c3c3c;
+    background-color: #e4e3e3;
+    z-index: 10;
+}
+
+/*
+ title
+------------------------------*/
+.title-area {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.title-txt {
+    width: 170px;
+    height: 45px;
+    border: 0px;
+    font-size: 30px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+
+/*
+ input
+------------------------------*/
+.input-area {
+    width: 100%;
+    height: 266px;
+}
+
+.task-row {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.txt-deact {
+    color: gray;
+}
+
+.tgl-btn {
+    width: 20px;
+    height: 20px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #8080808c;
+    vertical-align: middle;
+    color: white;
+    font-size: 11px;
+}
+
+.tgl-btn:hover {
+    box-shadow: 2px 2px 4px #3c3c3c;
+}
+
+.task-txt {
+    width: 150px;
+    height: 30px;
+}
+
+.task-txt-deact {
+    background-color: #8080808c;
+    outline: none;
+}
+
+.interval-row {
+    width: 100%;
+    height: 106px;
+    margin-top: 20px;
+}
+
+/*
+ btn
+------------------------------*/
+.btn-area {
+    width: 100%;
+    height: 40px;
+}
+
+.btn {
+    width: 50px;
+    height: 25px;
+    background-color: #8080808c;
+    border: 0px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.btn-act:hover {
+    box-shadow: 2px 2px 4px #3c3c3c;
+}
+
+.btn-deact {
+    background-color: #d6d6d6;
+}
+
+.set-btn {
+    margin-right: 15px;
+}
+
+.close-btn {
+    margin-right: 15px;
+}
+
+
+/*------------------------------
+ keyframes
+------------------------------*/
+@keyframes beat {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
