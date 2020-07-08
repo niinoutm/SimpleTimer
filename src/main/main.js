@@ -11,6 +11,8 @@ const CL_TD = "txt-deact";
 const CL_TTD = "task-txt-deact";
 const CL_VT = "valid-txt";
 const CL_N = "none";
+const CL_BD = "btn-deact";
+const CL_BA = "btn-act";
 
 // カラークラスリスト
 const CL_BD_LIST = ["cl-bd-0", "cl-bd-1", "cl-bd-2"];
@@ -27,6 +29,9 @@ var taskCount = 2;
 
 // タイマー処理
 var timer;
+
+// 初期表示かどうか
+var isInit = true;
 
 /** 初期処理 */
 $(function() {});
@@ -81,6 +86,26 @@ function setclickEvent() {
 }
 
 /**
+ * 設定ボタンクリックイベント
+ * @returns void
+ */
+function openSettingClickEcent() {
+    $("#dialogWindow").removeClass(CL_N);
+    if (!isInit) {
+        $("#closeBtn").removeClass(CL_BD);
+        $("#closeBtn").addClass(CL_BA);
+    }
+}
+
+/**
+ * closeボタンクリックイベント
+ * @returns void
+ */
+function closeClickEvent() {
+    $("#dialogWindow").addClass(CL_N);
+}
+
+/**
  * 入力チェック
  * @returns boolean result
  */
@@ -132,6 +157,12 @@ function checkInput() {
  * @returns void
  */
 function setTimerInfo() {
+    // 初期表示解除
+    if (isInit) {
+        isInit = false;
+    }
+    // サークルアニメーションをクリア
+    $("#circleShadow").css("animation", "");
     // インターバル設定
     resetTimerInfo();
     // タスク名設定
@@ -149,8 +180,18 @@ function setTimerInfo() {
  * @returns void
  */
 function resetTimerInfo() {
-    // サークルアニメーションをクリア
-    $("#circleShadow").css("animation", "");
+    // タスク名初期化
+    $("#infoText").val(taskList[0]);
+    // 色クラスリセット
+    for (var i = 0; i < 3; i++) {
+        $("#circleShadow").removeClass(CL_BD_LIST[i]);
+        $("#circle").removeClass(CL_LIST[i]);
+    }
+    // scope初期化
+    scope = 0;
+    // 色再設定
+    $("#circleShadow").addClass(CL_BD_LIST[0]);
+    $("#circle").addClass(CL_LIST[0]);
     // インターバルクリア
     clearTimer();
 }
@@ -176,12 +217,14 @@ function startTimer() {
             $("#circle").removeClass(CL_LIST[scope]);
             // scope加算
             scope += 1;
+            // タスク名設定
+            $("#infoText").val(taskList[scope]);
             if (scope == taskCount) {
                 // scopeがタスク数より多い場合scope初期化
                 scope = 0;
+                // タスク名設定
+                $("#infoText").val(taskList[scope]);
             }
-            // タスク名設定
-            $("#infoText").val(taskList[scope]);
             // カウント設定
             $("#circle").val(interval + TEXT_S);
             // サークル色設定
