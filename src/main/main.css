@@ -71,9 +71,32 @@ body {margin: 0px;}
 }
 
 .circle-shadow {
-    border: 5px #ff13b6 solid;
     border-radius: 130px;
     z-index: 8;
+}
+
+.cl-bd-0 {
+    border: 5px #ff13b6 solid;
+}
+
+.cl-bd-1 {
+    border: 5px #35ff1a solid;
+}
+
+.cl-bd-2 {
+    border: 5px #13e3ff solid;
+}
+
+.cl-0 {
+    color:#ff13b6;
+}
+
+.cl-1 {
+    color:#35ff1a;
+}
+
+.cl-2 {
+    color:#13e3ff;
 }
 
 /*
