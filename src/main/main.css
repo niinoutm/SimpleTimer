@@ -147,14 +147,22 @@ body {margin: 0px;}
     height: 20px;
     border: 0px;
     border-radius: 10px;
-    background-color: #8080808c;
     vertical-align: middle;
     color: white;
     font-size: 11px;
+    transition: .3s;
 }
 
 .tgl-btn:hover {
     box-shadow: 2px 2px 4px #3c3c3c;
+}
+
+.plus {
+    background-color: #f586df;
+}
+
+.minus {
+    background-color: #9dcfff;
 }
 
 .task-txt {

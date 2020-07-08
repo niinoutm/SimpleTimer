@@ -27,21 +27,21 @@
                     <div class="task-row">
                         <input type="button" class="tgl-btn hidden"/>
                         <span>TASK1:</span>
-                        <input type="text" class="task-txt" id="infoText" placeholder="input task"/>
+                        <input type="text" class="task-txt" id="taskText1" placeholder="input task"/>
                     </div>
                     <div class="task-row">
                         <input type="button" class="tgl-btn hidden"/>
                         <span>TASK2:</span>
-                        <input type="text" class="task-txt" id="infoText" placeholder="input task"/>
+                        <input type="text" class="task-txt" id="taskText2" placeholder="input task"/>
                     </div>
                     <div class="task-row">
-                        <input type="button" class="tgl-btn input-disabled cursor-po center plus" id="tgl-btn" value="+"/>
+                        <input type="button" class="tgl-btn input-disabled cursor-po center plus" id="tgl-btn" value="+" onclick="tglClickEvent()"/>
                         <span class="txt-deact">TASK3:</span>
-                        <input type="text" class="task-txt task-txt-deact" id="infoText" placeholder="input task" readonly/>
+                        <input type="text" class="task-txt task-txt-deact" id="taskText3" placeholder="input task" readonly/>
                     </div>
                     <div class="interval-row">
                         <span>INTERVAL</span><br>
-                        <input type="text" class="task-txt" id="infoText"/>
+                        <input type="text" class="interval-txt" id="intervalText"/>
                         <br>seconds
                     </div>
                 </div>
